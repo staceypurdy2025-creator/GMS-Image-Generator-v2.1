@@ -1,0 +1,26 @@
+const path = require('path');
+const { defineConfig, loadEnv } = require('vite');
+const react = require('@vitejs/plugin-react');
+
+console.log("✅ Vite config loaded");
+
+module.exports = defineConfig(({ mode }) => {
+  const env = loadEnv(mode, '.', '');
+  return {
+    server: {
+      port: 5191,
+      host: '0.0.0.0',
+    },
+    plugins: [react()],
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      }
+    }
+  };
+});
+

@@ -1,0 +1,21 @@
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Vite
+.vite/
+
+# Logs
+*.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# AI Studio
+.ai-studio/
