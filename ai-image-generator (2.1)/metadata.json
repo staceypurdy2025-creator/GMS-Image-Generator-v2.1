@@ -1,0 +1,5 @@
+
+{
+  "name": "AI Image Generator",
+  "description": "A mobile-first web application that generates images from text prompts using the Gemini API. It features a clean, modern interface and allows users to download the generated images directly to their device."
+}
